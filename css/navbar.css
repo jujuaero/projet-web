@@ -82,3 +82,34 @@ nav {
         transform: translateY(0);
     }
 }
+
+footer {
+    width: 100%;
+    background: linear-gradient(90deg, #3358a3 0%, #4f8cff 100%);
+    color: #fff;
+    padding: 32px 0 16px 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.footer-content p {
+    margin: 8px 0;
+    letter-spacing: 0.5px;
+}
+.footer-content a {
+    color: #ffe082;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-content a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
