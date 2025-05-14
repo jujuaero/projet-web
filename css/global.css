@@ -1,0 +1,13 @@
+body{
+    background-color: aquamarine;
+}
+
+nav>a{
+    text-decoration: none ;
+    color: blueviolet;
+}
+
+nav>a:hover{
+    background-color: rgb(131, 226, 167);
+    border-radius: 15px;
+}
