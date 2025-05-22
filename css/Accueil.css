@@ -1,0 +1,12 @@
+.futur-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 32px;
+}
+#Dinochrome_img{
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
