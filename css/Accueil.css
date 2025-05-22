@@ -70,10 +70,18 @@ section > img {
     max-width: 220px;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(44,62,80,0.10);
-    transition: transform 0.2s;
+    transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55);
 }
 section > img:hover {
-    transform: scale(1.04) rotate(-2deg);
+    transform: scale(1.08) rotate(-2deg);
+    animation: bounce 0.5s;
+}
+@keyframes bounce {
+    0%   { transform: scale(1) rotate(-2deg);}
+    30%  { transform: scale(1.12) rotate(-2deg);}
+    50%  { transform: scale(0.98) rotate(-2deg);}
+    70%  { transform: scale(1.05) rotate(-2deg);}
+    100% { transform: scale(1.08) rotate(-2deg);}
 }
 
 /* --- Section Futur --- */
@@ -114,6 +122,63 @@ section > img:hover {
 .footer-content a {
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+/* --- Animations d'apparition --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, .futur-container {
+    animation: fadeInUp 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* --- Effet de survol sur les titres --- */
+h2, h3 {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+h2:hover, h3:hover {
+    color: #1abc9c;
+}
+
+/* --- Soulignement animé sur les titres de section --- */
+h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #4f8cff 0%, #1abc9c 100%);
+    border-radius: 2px;
+    margin-top: 8px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+h2:hover::after {
+    transform: scaleX(1);
+}
+
+/* --- Effet translation au survol des sections --- */
+section:hover, .futur-container:hover {
+    box-shadow: 0 8px 36px rgba(44,62,80,0.16);
+    transform: translateY(-6px) scale(1.01);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* --- Animation légère sur les listes --- */
+ul {
+    transition: padding-left 0.3s;
+}
+ul:hover {
+    padding-left: 24px;
 }
 
 /* --- Responsive --- */
