@@ -24,6 +24,10 @@ body {
     background-size: 50%;
     background-position-y: 80%;
     background-repeat: repeat-x;
+
+}
+
+.jeu.bg-anim {
     animation: bg-move 3s linear infinite;
 }
 
@@ -32,16 +36,19 @@ body {
         background-position-x: 0;
     }
     100% {
-        background-position-x: -1000px; /* adapte à la largeur de ton image ou zone */
+        background-position-x: -1000px; 
     }
 }
 
-.perso{
-	background-image: url("icon2.png");
+.perso {
+    background-image: url("icon2.png");
     width: 256px;
     height: 256px;
     position: relative;
     top: 88px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .animation {
