@@ -5,10 +5,10 @@ var jeu = document.querySelector(".jeu");
 var compteur = 0;
 
 var oursFrames = [
-    "ours1.png",
-    "ours2.png",
-    "ours3.png",
-    "ours4.png"
+    "../images/ours1.png",
+    "../images/ours2.png",
+    "../images/ours3.png",
+    "../images/ours4.png"
 ];
 var oursInterval = null;
 var currentFrame = 0;
@@ -34,7 +34,7 @@ function startOursAnimation() {
 
 function stopOursAnimation() {
     if (oursInterval) clearInterval(oursInterval);
-    perso.style.backgroundImage = "url('casse.png')";
+    perso.style.backgroundImage = "url('../images/casse.png')";
 }
 
 function sleep(milliseconds) {const date = Date.now();let currentDate = null;do {currentDate = Date.now();} while (currentDate - date < milliseconds);}
