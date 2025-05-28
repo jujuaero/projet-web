@@ -234,10 +234,10 @@ function clearFullLines() {
 
 // Contrôles clavier
 window.addEventListener('keydown', (e) => {
-  if (e.key === 's') moveLeft();
-  else if (e.key === 'f') moveRight();
-  else if (e.key === 'd') moveDown();
-  else if (e.key === 'e') rotate();
+  if (e.key === 'q') moveLeft();
+  else if (e.key === 'd') moveRight();
+  else if (e.key === 's') moveDown();
+  else if (e.key === 'z') rotate();
 });
 
 // Désactive le jeu au chargement

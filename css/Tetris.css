@@ -44,7 +44,7 @@ h1 {
   box-shadow: 0 2px 8px rgba(44,62,80,0.10);
 }
 .taken {
-  background: #222c36 !important;
+  background: linear-gradient(135deg, #052e57 60%, #0660bb 100%) !important;
   border: 1.5px solid #4f8cff;
 }
 
