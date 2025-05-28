@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/quiz.css">
     <title>Quiz</title>
 </head>
 <body>
@@ -19,6 +20,74 @@
         </nav>
     </header>
     
+    <section class="quiz-section">
+        <h1>Quiz : Testez vos connaissances sur le site !</h1>
+        <form id="quiz-form">
+            <div class="quiz-question">
+                <h4>1. Quel est le thème principal de ce site web ?</h4>
+                <label><input type="radio" name="q1" value="a"> L'histoire du cinéma</label><br>
+                <label><input type="radio" name="q1" value="b"> L'histoire du jeu vidéo</label><br>
+                <label><input type="radio" name="q1" value="c"> La programmation informatique</label>
+            </div>
+            <div class="quiz-question">
+                <h4>2. Quel mini-jeu n'est pas proposé sur ce site ?</h4>
+                <label><input type="radio" name="q2" value="a"> Tetris</label><br>
+                <label><input type="radio" name="q2" value="b"> Ice Race</label><br>
+                <label><input type="radio" name="q2" value="c"> Snake</label>
+            </div>
+            <div class="quiz-question">
+                <h4>3. Qui sont les créateurs du site ?</h4>
+                <label><input type="radio" name="q3" value="a"> Jules et Thomas</label><br>
+                <label><input type="radio" name="q3" value="b"> Alice et Bob</label><br>
+                <label><input type="radio" name="q3" value="c"> Mario et Luigi</label>
+            </div>
+            <div class="quiz-question">
+                <h4>4. Quelle période n'est pas abordée dans la chronologie de l'histoire du jeu vidéo ?</h4>
+                <label><input type="radio" name="q4" value="a"> L'âge d'or de l'arcade</label><br>
+                <label><input type="radio" name="q4" value="b"> L'ère de la 3D et des CD-ROM</label><br>
+                <label><input type="radio" name="q4" value="c"> L'ère du streaming musical</label>
+            </div>
+            <div class="quiz-question">
+                <h4>5. Quel est l'objectif principal du site ?</h4>
+                <label><input type="radio" name="q5" value="a"> Partager des recettes de cuisine</label><br>
+                <label><input type="radio" name="q5" value="b"> Présenter l'histoire et l'évolution du jeu vidéo</label><br>
+                <label><input type="radio" name="q5" value="c"> Vendre des jeux vidéo</label>
+            </div>
+            <div class="quiz-question">
+                <h4>6. Quel style graphique est privilégié sur le site ?</h4>
+                <label><input type="radio" name="q6" value="a"> Moderne, coloré et responsive</label><br>
+                <label><input type="radio" name="q6" value="b"> Minimaliste noir et blanc</label><br>
+                <label><input type="radio" name="q6" value="c"> Rétro pixel art</label>
+            </div>
+            <div class="quiz-question">
+                <h4>7. Quel lien externe est proposé dans le pied de page ?</h4>
+                <label><input type="radio" name="q7" value="a"> Wikipédia - Histoire du jeu vidéo</label><br>
+                <label><input type="radio" name="q7" value="b"> YouTube</label><br>
+                <label><input type="radio" name="q7" value="c"> Steam</label>
+            </div>
+            <div class="quiz-question">
+                <h4>8. Quel langage n'est pas utilisé dans ce projet ?</h4>
+                <label><input type="radio" name="q8" value="a"> HTML</label><br>
+                <label><input type="radio" name="q8" value="b"> CSS</label><br>
+                <label><input type="radio" name="q8" value="c"> Python</label>
+            </div>
+            <div class="quiz-question">
+                <h4>9. Quel est le nom du mini-jeu inspiré du dinosaure Chrome ?</h4>
+                <label><input type="radio" name="q9" value="a"> Ice Race</label><br>
+                <label><input type="radio" name="q9" value="b"> Dinochrome</label><br>
+                <label><input type="radio" name="q9" value="c"> Dino Run</label>
+            </div>
+            <div class="quiz-question">
+                <h4>10. Quelle est la motivation principale des créateurs ?</h4>
+                <label><input type="radio" name="q10" value="a"> Partager leur passion pour le jeu vidéo et apprendre le développement web</label><br>
+                <label><input type="radio" name="q10" value="b"> Gagner de l'argent</label><br>
+                <label><input type="radio" name="q10" value="c"> Créer un site de vente</label>
+            </div>
+            <button type="button" onclick="checkQuiz()">Valider mes réponses</button>
+        </form>
+        <div id="quiz-result"></div>
+    </section>
+    <script src="../js/quiz.js"></script>
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 Projet scolaire - Histoire du jeu vidéo</p>

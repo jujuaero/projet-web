@@ -166,14 +166,14 @@ h2:hover::after {
     transform: scaleX(1);
 }
 
-/* --- Effet translation au survol des sections --- */
+
 section:hover, .futur-container:hover {
     box-shadow: 0 8px 36px rgba(44,62,80,0.16);
     transform: translateY(-6px) scale(1.01);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
-/* --- Animation légère sur les listes --- */
+
 ul {
     transition: padding-left 0.3s;
 }
@@ -181,7 +181,7 @@ ul:hover {
     padding-left: 24px;
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 900px) {
     section, .futur-container {
         max-width: 98vw;

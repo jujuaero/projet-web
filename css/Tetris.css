@@ -10,6 +10,24 @@
   max-width: 420px;
 }
 
+.tetris-rules{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7faff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  padding: 32px 36px 24px 36px;
+  margin: 32px auto 24px auto;
+  max-width: 420px;
+}
+
+.tetris-rules:hover{
+  box-shadow: 0 8px 36px rgba(44,62,80,0.16);
+  transform: translateY(-6px) scale(1.01);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
 h1 {
   text-align: center;
   color: #3358a3;

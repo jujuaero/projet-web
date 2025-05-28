@@ -21,9 +21,23 @@
     </header>
     <section>
         <h1>Tetris</h1>
+        <div class="tetris-rules">
+            <h2>Comment jouer à Tetris&nbsp;?</h2>
+            <ul>
+                <li>Appuie sur <b>Démarrer le jeu</b> pour lancer une partie.</li>
+                <li>Déplace les blocs : <b>Q</b> (gauche), <b>D</b> (droite), <b>S</b> (descendre plus vite).</li>
+                <li>Fais pivoter le bloc : <b>Z</b> (rotation).</li>
+                <li>Empile les blocs pour compléter des lignes et marquer des points.</li>
+                <li>Le jeu s'arrête si les blocs atteignent le haut de la grille.</li>
+                <li>Utilise les boutons <b>Pause</b>, <b>Reprendre</b> ou <b>Réinitialiser</b> à tout moment.</li>
+            </ul>
+            <p>Bonne chance ! Vise le meilleur score!</p>
+         </div>
         <div class="tetris-container">
-            <div id="tetris-grid"></div>
-            <div id="score">Score : 0</div>
+            <div>
+                <div id="tetris-grid"></div>
+                <div id="score">Score : 0</div>
+            </div>
         </div>
         <div id="button">
             <input type="button" id="start-button" value="Démarrer le jeu" onclick="startGame()">
