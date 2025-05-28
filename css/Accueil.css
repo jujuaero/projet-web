@@ -41,12 +41,7 @@ section:hover {
     box-shadow: 0 6px 32px rgba(44,62,80,0.13);
 }
 
-ul {
-    margin: 1em 0 1em 1.5em;
-    padding: 0;
-}
-
-li {
+ol>li {
     margin-bottom: 0.5em;
     line-height: 1.6;
     font-size: 1.08em;
@@ -174,10 +169,12 @@ section:hover, .futur-container:hover {
 }
 
 
-ul {
+ol {
     transition: padding-left 0.3s;
+    margin: 1em 0 1em 1.5em;
+    padding: 0;
 }
-ul:hover {
+ol:hover {
     padding-left: 24px;
 }
 
