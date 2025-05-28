@@ -21,6 +21,9 @@ h1 {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
+#quiz-button, #quiz-result{
+    text-align: center;
+}
 
 button {
     background: linear-gradient(90deg, #4f8cff 0%, #1abc9c 100%);
