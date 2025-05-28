@@ -6,6 +6,10 @@ header {
 
 body{
     background: #f6f8fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
 
 
