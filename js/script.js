@@ -112,7 +112,7 @@ function verification(){
         var obstaclesLeft = parseInt(window.getComputedStyle(obstacles).getPropertyValue("left"));
         var obstaclesLeft2 = parseInt(window.getComputedStyle(obstacles2).getPropertyValue("left"));
         
-        if(obstaclesLeft < 100 && obstaclesLeft > 0 && persoTop >= 60){
+        if(obstaclesLeft < 100 && obstaclesLeft > 0 && persoTop >= 60 ){
             jeuEnCours = false;
             updateRecord();
             stopOursAnimation();
