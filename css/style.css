@@ -122,3 +122,17 @@ button:active {
 }
 p{font-size: 18px;color:black;text-align : center;}
 #space{font-size: 14px;color: white;}
+
+/* Ajoute cette règle à ton fichier style.css */
+.logo-top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 64px;
+    height: 64px;
+    background-image: url("../images/icon2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+}
