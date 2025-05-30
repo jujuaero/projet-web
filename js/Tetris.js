@@ -12,49 +12,49 @@ for (let i = 0; i < width * height; i++) {
 
 // Définition des tétriminos et leurs rotations
 const tetrominoes = [
-  // L
+
   [
     [1, width+1, width*2+1, 2],
     [width, width+1, width+2, width*2+2],
     [1, width+1, width*2+1, width*2],
     [width, width*2, width*2+1, width*2+2]
   ],
-  // T
+
   [
     [1, width, width+1, width+2],
     [1, width+1, width+2, width*2+1],
     [width, width+1, width+2, width*2+1],
     [1, width, width+1, width*2+1]
   ],
-  // S
+
   [
     [1, 2, width, width+1],
     [0, width, width+1, width*2+1],
     [width+1, width+2, width*2, width*2+1],
     [0, width, width+1, width*2]
   ],
-  // O
+
   [
     [0, 1, width, width+1],
     [0, 1, width, width+1],
     [0, 1, width, width+1],
     [0, 1, width, width+1]
   ],
-  // J
+
   [
     [1, width+1, width*2+1, width*2],
     [width, width+1, width+2, 2],
     [1, width+1, width*2+1, 0],
     [width, width+1, width+2, width*2+2]
   ],
-  // I
+
   [
     [1, width+1, width*2+1, width*3+1],
     [width, width+1, width+2, width+3],
     [1, width+1, width*2+1, width*3+1],
     [width, width+1, width+2, width+3]
   ],
-  // Z
+
   [
     [0, 1, width+1, width+2],
     [2, width+1, width+2, width*2+1],
@@ -142,8 +142,7 @@ function freeze() {
     cells[currentPosition + index]?.classList.add('taken')
   );
   clearFullLines();
-  // Nouveau tétrimino
-  random = Math.floor(Math.random() * tetrominoes.length);
+  random = Math.floor(Math.random() * tetrominoes.length);// création d'un nouveau bloc à placer
   currentRotation = 0;
   currentTetromino = tetrominoes[random][currentRotation];
   currentPosition = 3;
@@ -232,7 +231,6 @@ function clearFullLines() {
   }
 }
 
-// Contrôles clavier
 window.addEventListener('keydown', (e) => {
   if (e.key === 'q') moveLeft();
   else if (e.key === 'd') moveRight();
@@ -240,7 +238,37 @@ window.addEventListener('keydown', (e) => {
   else if (e.key === 'z') rotate();
 });
 
-// Désactive le jeu au chargement
+window.addEventListener('touchstart', (e) =>{
+  const startX = e.touches[0].clientX;
+  const startY = e.touches[0].clientY;
+}, { passive: true });
+
+window.addEventListener('touchmove', (e) => {
+  const moveX = e.touches[0].clientX;
+  const moveY = e.touches[0].clientY;
+
+  if (Math.abs(moveX - startX) > Math.abs(moveY - startY)) {
+    if (moveX < startX) moveLeft();
+    else moveRight();
+  } else {
+    if (moveY > startY) moveDown();
+    else rotate();
+  }
+}, { passive: true });
+
+window.addEventListener('touchend', () => {
+  const endx = e.touches[0].clientX;
+  const endY = e.touches[0].clientY;
+
+if (Math.abs(endx - startX) > Math.abs(endY - startY)) {
+    if (endx < startX) moveLeft();
+    else moveRight();
+  } else {
+    if (endY > startY) moveDown();
+    else rotate();
+  }
+});
+
 undraw();
 if (timerId) clearInterval(timerId);
 timerId = null;

@@ -85,11 +85,12 @@ body{
     border-radius: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     header {
         width: 100%;
         min-width: 0;
         padding: 0;
+        
     }
     .headerNav {
         padding: 0 8px;
@@ -99,7 +100,7 @@ body{
         width: 36px;
         margin-top: -6px;
         margin-right: 0;
-        position: static;
+        position: absolute;
         display: block;
     }
     #titre {
@@ -108,10 +109,10 @@ body{
         padding: 0 4px;
     }
     .nav-links {
-        flex-direction: column;
         align-items: center;
+        position: relative;
+        flex-direction: column;
         gap: 12px;
-        position: static;
         width: 100vw;
         background: linear-gradient(90deg, #4f8cff 0%, #3358a3 100%);
         box-shadow: none;
