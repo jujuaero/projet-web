@@ -242,7 +242,6 @@ window.addEventListener('keydown', (e) => {
 const startX=0;
 const startY=0;
 
-
 window.addEventListener('touchstart', (e) =>{
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
@@ -255,7 +254,7 @@ window.addEventListener('touchmove', (e) => {
   if (Math.abs(moveX - startX) > Math.abs(moveY - startY)) {
     if (moveX < startX) moveLeft();
     else moveRight();
-  } else {
+  } else if (Math.abs(moveX - startX) < Math.abs(moveY - startY)) {
     if (moveY > startY) moveDown();
     else rotate();
   }
@@ -268,7 +267,7 @@ window.addEventListener('touchend', (e) => {
 if (Math.abs(endx - startX) > Math.abs(endY - startY)) {
     if (endx < startX) moveLeft();
     else moveRight();
-  } else {
+  } else if (Math.abs(moveX - startX) < Math.abs(moveY - startY)) {
     if (endY > startY) moveDown();
     else rotate();
   }
