@@ -238,9 +238,14 @@ window.addEventListener('keydown', (e) => {
   else if (e.key === 'z') rotate();
 });
 
+
+const startX=0;
+const startY=0;
+
+
 window.addEventListener('touchstart', (e) =>{
-  const startX = e.touches[0].clientX;
-  const startY = e.touches[0].clientY;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
 }, { passive: true });
 
 window.addEventListener('touchmove', (e) => {
@@ -256,7 +261,7 @@ window.addEventListener('touchmove', (e) => {
   }
 }, { passive: true });
 
-window.addEventListener('touchend', () => {
+window.addEventListener('touchend', (e) => {
   const endx = e.touches[0].clientX;
   const endY = e.touches[0].clientY;
 
