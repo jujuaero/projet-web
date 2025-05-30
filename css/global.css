@@ -86,7 +86,10 @@ body{
 ;
 }
 
-@media (max-width: 800px) {
+@media (max-width< 800px) {
+    header{
+        width: 80%;
+    }
     nav {
         padding: 0 12px;
     }
