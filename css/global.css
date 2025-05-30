@@ -83,33 +83,82 @@ body{
     margin-top: -13px;
     overflow: hidden;
     border-radius: 50px;
-;
 }
 
-@media (max-width< 800px) {
-    header{
-        width: 10%;
+@media (max-width: 800px) {
+    header {
+        width: 100%;
+        min-width: 0;
+        padding: 0;
     }
-    nav {
-        padding: 0 12px;
+    .headerNav {
+        padding: 0 8px;
+        height: 56px;
+    }
+    #logo {
+        width: 36px;
+        margin-top: -6px;
+        margin-right: 0;
+        position: static;
+        display: block;
+    }
+    #titre {
+        font-size: 1rem;
+        margin-left: 10px;
+        padding: 0 4px;
     }
     .nav-links {
-        position: absolute;
-        top: 64px;
-        left: 0;
-        width: 100vw;
         flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: static;
+        width: 100vw;
         background: linear-gradient(90deg, #4f8cff 0%, #3358a3 100%);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-20px);
-        transition: opacity 0.4s, transform 0.4s;
-    }
-    .nav-links.active {
+        box-shadow: none;
         opacity: 1;
         pointer-events: auto;
-        transform: translateY(0);
+        transform: none;
+        padding: 12px 0 0 0;
+    }
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links li a {
+        font-size: 1.05rem;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+        display: block;
+        border-radius: 0;
+    }
+    .nav-links li a:hover {
+        background: rgba(255,255,255,0.18);
+        color: #ffe082;
+        transform: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .headerNav {
+        padding: 0 2px;
+        height: 48px;
+    }
+    #logo {
+        width: 30px;
+    }
+    #titre {
+        font-size: 0.95rem;
+        margin-left: 6px;
+    }
+    .nav-links li a {
+        font-size: 0.98rem;
+        padding: 12px 10px 12px 18px;
+    }
+    .footer-content {
+        font-size: 0.98rem;
+        padding: 0 4px;
     }
 }
 
