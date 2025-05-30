@@ -1,4 +1,3 @@
-
 h1 {
     font-size: 2.5em;
     letter-spacing: 1px;
@@ -186,13 +185,37 @@ ol:hover {
         flex-direction: column;
         align-items: center;
         gap: 18px;
-        padding: 18px 2vw;
+        padding: 14px 2vw;
+        margin: 18px auto 18px auto;
+        max-width: 99vw;
     }
     .Image {
-        width: 90vw;
-        max-width: 320px;
+        width: 96vw;
+        max-width: 340px;
+        min-width: 160px;
+        margin-bottom: 10px;
     }
-    #futur {
-        width: 100%;
+    section, .Container section {
+        padding: 12px 2vw;
+        max-width: 99vw;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    p, li {
+        font-size: 1em;
+    }
+}
+@media (max-width: 400px) {
+    .Image {
+        width: 98vw;
+        max-width: 98vw;
+    }
+    section, .Container section {
+        padding: 6px 1vw;
     }
 }
