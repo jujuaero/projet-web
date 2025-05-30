@@ -245,7 +245,7 @@ const startY=0;
 window.addEventListener('touchstart', (e) =>{
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
-}, { passive: true });
+}, { passive: false });
 
 window.addEventListener('touchmove', (e) => {
   const moveX = e.touches[0].clientX;
@@ -258,7 +258,7 @@ window.addEventListener('touchmove', (e) => {
     if (moveY > startY) moveDown();
     else rotate();
   }
-}, { passive: true });
+}, { passive: false });
 
 window.addEventListener('touchend', (e) => {
   const endx = e.touches[0].clientX;
