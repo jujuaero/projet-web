@@ -247,19 +247,6 @@ window.addEventListener('touchstart', (e) =>{
   startY = e.touches[0].clientY;
 }, { passive: false });
 
-window.addEventListener('touchmove', (e) => {
-  const moveX = e.touches[0].clientX;
-  const moveY = e.touches[0].clientY;
-
-  if (Math.abs(moveX - startX) > Math.abs(moveY - startY)) {
-    if (moveX < startX) moveLeft();
-    else moveRight();
-  } else if (Math.abs(moveX - startX) < Math.abs(moveY - startY)) {
-    if (moveY > startY) moveDown();
-    else rotate();
-  }
-}, { passive: false });
-
 window.addEventListener('touchend', (e) => {
   const endx = e.touches[0].clientX;
   const endY = e.touches[0].clientY;
