@@ -51,7 +51,7 @@ blockquote {
     box-shadow: 0 1px 6px rgba(44,62,80,0.06);
 }
 
-/* --- Image principale --- */
+
 section > img {
     display: block;
     margin: 0 auto 18px auto;
@@ -72,10 +72,9 @@ section > img:hover {
     100% { transform: scale(1.08) rotate(-2deg);}
 }
 
-/* --- Section Futur --- */
-.futur-container {
+.Container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 36px;
     margin: 40px auto 32px auto;
     max-width: 900px;
@@ -85,11 +84,11 @@ section > img:hover {
     padding: 32px 28px;
     transition: box-shadow 0.3s;
 }
-.futur-container:hover {
+.Container:hover {
     box-shadow: 0 6px 32px rgba(44,62,80,0.13);
 }
 
-#Dinochrome_img {
+.Image {
     width: 320px;
     max-width: 40vw;
     height: auto;
@@ -98,7 +97,7 @@ section > img:hover {
     box-shadow: 0 2px 12px rgba(44,62,80,0.10);
     transition: transform 0.2s;
 }
-#Dinochrome_img:hover {
+.Image:hover {
     transform: scale(1.03) rotate(-2deg);
 }
 
@@ -106,13 +105,13 @@ section > img:hover {
     flex: 1;
 }
 
-/* --- Footer (compléments) --- */
+
 .footer-content a {
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
-/* --- Animations d'apparition --- */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -124,7 +123,7 @@ section > img:hover {
     }
 }
 
-section, .futur-container {
+section, .Container {
     animation: fadeInUp 0.8s cubic-bezier(.4,0,.2,1);
 }
 
@@ -173,23 +172,23 @@ ol:hover {
 
 
 @media (max-width: 900px) {
-    section, .futur-container {
+    section, .Container {
         max-width: 98vw;
         padding: 18px 6vw;
     }
-    #Dinochrome_img {
+    .Image {
         width: 180px;
     }
 }
 
 @media (max-width: 700px) {
-    .futur-container {
+    .Container {
         flex-direction: column;
         align-items: center;
         gap: 18px;
         padding: 18px 2vw;
     }
-    #Dinochrome_img {
+    .Image {
         width: 90vw;
         max-width: 320px;
     }

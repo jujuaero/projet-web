@@ -12,7 +12,6 @@ body{
     padding: 0;
 }
 
-
 .headerNav {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,7 +19,7 @@ body{
     display: flex;
     align-items: center;
     height: 64px;
-    position: relative;
+    position:relative;
     justify-content: space-between;
 }
 
@@ -35,6 +34,7 @@ body{
 
 .nav-links li a {
     text-decoration: none;
+    margin-left: 30px;
     color: #fff;
     font-weight: 500;
     font-size: 1.1rem;
@@ -66,6 +66,24 @@ body{
 
 .nav-links li a:hover::after {
     width: 100%;
+}
+
+#titre{
+    margin-left: 25px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+#logo{
+    width: 50px;
+    position: absolute;
+    margin-right: 10px;
+    margin-top: -13px;
+    overflow: hidden;
+    border-radius: 50px;
+;
 }
 
 @media (max-width: 800px) {
