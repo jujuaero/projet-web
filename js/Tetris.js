@@ -238,27 +238,39 @@ window.addEventListener('keydown', (e) => {
   else if (e.key === 'z') rotate();
 });
 
-
-const startX=0;
-const startY=0;
-
 window.addEventListener('touchstart', (e) =>{
-  startX = e.touches[0].clientX;
-  startY = e.touches[0].clientY;
-}, { passive: false });
+  const startX = e.touches[0].clientX;
+  const startY = e.touches[0].clientY;
 
-window.addEventListener('touchend', (e) => {
-  const endx = e.touches[0].clientX;
-  const endY = e.touches[0].clientY;
+  const zonePressedX='';
+  const zonePressedY='';
 
-if (Math.abs(endx - startX) > Math.abs(endY - startY)) {
-    if (endx < startX) moveLeft();
-    else moveRight();
-  } else if (Math.abs(moveX - startX) < Math.abs(moveY - startY)) {
-    if (endY > startY) moveDown();
-    else rotate();
+  if (startX < window.innerWidth / 3) {
+    zonePressedX = 'gauche';
+  } else if (startX > window.innerWidth * 2 / 3) {
+    zonePressedX = 'droite';
+  } else {
+    zonePressedX = 'centre';
   }
-});
+  
+  if (startY < window.innerHeight / 3) {
+    zonePressedY = 'haut';
+  } else if (startY > window.innerHeight * 2 / 3) {
+    zonePressedY = 'bas';
+  } else {
+    zonePressedY = 'centre';
+  }
+
+  if (zonePressedX === 'gauche') {
+    moveLeft();
+  } else if (zonePressedX === 'droite') {
+    moveRight();
+  } else if (zonePressedY === 'bas') {
+    moveDown();
+  } else if (zonePressedY === 'haut') {
+    rotate();
+  }
+}, { passive: true });
 
 undraw();
 if (timerId) clearInterval(timerId);
