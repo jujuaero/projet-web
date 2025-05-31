@@ -232,10 +232,10 @@ function clearFullLines() {
 }
 
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'q') moveLeft();
-  else if (e.key === 'd') moveRight();
-  else if (e.key === 's') moveDown();
-  else if (e.key === 'z') rotate();
+  if (e.key === 'q' && !isGameOver && !isPaused) moveLeft();
+  else if (e.key === 'd' && !isGameOver && !isPaused) moveRight();
+  else if (e.key === 's' && !isGameOver && !isPaused) moveDown();
+  else if (e.key === 'z' && !isGameOver && !isPaused) rotate();
 });
 
 window.addEventListener('touchstart', (e) =>{
@@ -261,13 +261,13 @@ window.addEventListener('touchstart', (e) =>{
     zonePressedY = 'centre';
   }
 
-  if (zonePressedX === 'gauche') {
+  if (zonePressedX === 'gauche' && !isGameOver && !isPaused) {
     moveLeft();
-  } else if (zonePressedX === 'droite') {
+  } else if (zonePressedX === 'droite' && !isGameOver && !isPaused) {
     moveRight();
-  } else if (zonePressedY === 'bas') {
+  } else if (zonePressedY === 'bas' && !isGameOver && !isPaused) {
     moveDown();
-  } else if (zonePressedY === 'haut') {
+  } else if (zonePressedY === 'haut' && !isGameOver && !isPaused) {
     rotate();
   }
 }, { passive: true });
