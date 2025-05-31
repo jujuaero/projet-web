@@ -235,7 +235,7 @@ function clearFullLines() {
 }
 
 window.addEventListener('keydown', (e) => {
-  if (start) return;
+  if (!start) return;
 
 
   if (e.key === 'q' && !isGameOver && !isPaused) moveLeft();
@@ -245,7 +245,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('touchstart', (e) =>{
-  if (start) return;
+  if (!start) return;
 
 
   const startX = e.touches[0].clientX;
