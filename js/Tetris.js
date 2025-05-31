@@ -242,8 +242,8 @@ window.addEventListener('touchstart', (e) =>{
   const startX = e.touches[0].clientX;
   const startY = e.touches[0].clientY;
 
-  const zonePressedX='';
-  const zonePressedY='';
+  let zonePressedX='';
+  let zonePressedY='';
 
   if (startX < window.innerWidth / 3) {
     zonePressedX = 'gauche';
@@ -252,7 +252,7 @@ window.addEventListener('touchstart', (e) =>{
   } else {
     zonePressedX = 'centre';
   }
-  
+
   if (startY < window.innerHeight / 3) {
     zonePressedY = 'haut';
   } else if (startY > window.innerHeight * 2 / 3) {
