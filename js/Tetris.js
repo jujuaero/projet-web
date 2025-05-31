@@ -81,7 +81,7 @@ function undraw() {
 }
 
 let timerId = null;
-let isPaused = false;
+let isPaused = true;
 let isGameOver = false;
 
 function startGame() {
