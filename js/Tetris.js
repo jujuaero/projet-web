@@ -81,13 +81,16 @@ function undraw() {
 }
 
 let timerId = null;
-let isPaused = true;
+let isPaused = false;
 let isGameOver = false;
+
+let start=false;
 
 function startGame() {
   if (timerId || isGameOver) return;
   draw();
   timerId = setInterval(moveDown, 600);
+  start = true;
 }
 
 function pauseGame() {
@@ -232,6 +235,9 @@ function clearFullLines() {
 }
 
 window.addEventListener('keydown', (e) => {
+  if (start) return;
+
+
   if (e.key === 'q' && !isGameOver && !isPaused) moveLeft();
   else if (e.key === 'd' && !isGameOver && !isPaused) moveRight();
   else if (e.key === 's' && !isGameOver && !isPaused) moveDown();
@@ -239,6 +245,9 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('touchstart', (e) =>{
+  if (start) return;
+
+
   const startX = e.touches[0].clientX;
   const startY = e.touches[0].clientY;
 
