@@ -20,16 +20,19 @@ body{
     align-items: center;
     height: 64px;
     position:relative;
-    justify-content: space-between;
+    justify-content:flex-start;
+    gap:20px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 12px;
     padding: 0;
     margin: 0;
+    margin-left: auto;
     transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+    flex-grow: 1;
 }
 
 .nav-links li a {
@@ -68,8 +71,15 @@ body{
     width: 100%;
 }
 
+.logo-titre{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
 #titre{
-    margin-left: 25px;
     color: #fff;
     font-weight: 500;
     font-size: 1.1rem;
@@ -78,29 +88,41 @@ body{
 }
 #logo{
     width: 50px;
-    position: absolute;
-    margin-right: 10px;
-    margin-top: -13px;
     overflow: hidden;
     border-radius: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px){
+    .headerNav {
+        padding: 0 16px;
+    }
+    #logo {
+        width: 40px;
+    }
+    #titre {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    .nav-links li a{
+        font-size: 1.05rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 800px) {
     header {
         width: 100%;
         min-width: 0;
         padding: 0;
-        
     }
     .headerNav {
         padding: 0 8px;
         height: 56px;
     }
     #logo {
-        width: 36px;
+        width: 40px;
         margin-top: -6px;
         margin-right: 0;
-        position: absolute;
         display: block;
     }
     #titre {
@@ -109,6 +131,7 @@ body{
         padding: 0 4px;
     }
     .nav-links {
+        margin-top: 235px;
         align-items: center;
         position: relative;
         flex-direction: column;
@@ -120,6 +143,10 @@ body{
         pointer-events: auto;
         transform: none;
         padding: 12px 0 0 0;
+        display: none;
+    }
+    .nav-links.open {
+        display: flex;
     }
     .nav-links li {
         margin: 0;
@@ -139,6 +166,19 @@ body{
         color: #ffe082;
         transform: none;
     }
+
+    .menu-burger{
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    z-index: 1000;
+  }
 }
 
 @media (max-width: 500px) {
