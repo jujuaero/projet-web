@@ -225,6 +225,12 @@ body{
         font-size: 0.98rem;
         padding: 0 4px;
     }
+
+    .menu-burger{
+        font-size: 0.98rem;
+        right: 8px;
+        top: 8px;
+    }
 }
 
 footer {
