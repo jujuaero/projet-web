@@ -372,3 +372,66 @@ fieldset{
     padding: 6px 8px;
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+
+  h1, h2, legend {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .quiz-question {
+    padding: 12px 10px;
+    margin: 12px auto;
+    box-shadow: none;
+  }
+
+  .quiz-question label {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 0.95em;
+  }
+
+  .quiz-question input[type="radio"],
+  .quiz-question input[type="checkbox"] {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+  }
+
+  textarea {
+    font-size: 0.95em;
+    padding: 6px 8px;
+  }
+
+  #start-form input[type="text"],
+  #start-form input[type="email"],
+  #start-form input[type="date"] {
+    width: 90vw;
+    font-size: 1em;
+  }
+
+  section button,
+  #start-form button {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  #timer {
+    top: 0;
+    font-size: 1em;
+    padding: 6px 8px;
+  }
+
+  #scoreboard th,
+  #scoreboard td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
