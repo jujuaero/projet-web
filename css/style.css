@@ -137,3 +137,21 @@ p{font-size: 18px;color:black;text-align : center;}
     z-index: 1000;
 }
 
+.perso, .obstacles, .obstacles2 {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+    .jeu {
+        transform: scale(0.8);
+        transform-origin: top center;
+    }
+    
+    .obstacles, .obstacles2 {
+        animation-timing-function: linear !important;
+    }
+}
+
