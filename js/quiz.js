@@ -84,7 +84,7 @@ function verificationInfo(){
         pseudo= document.getElementById("pseudo").value.trim();
         bouton.style.display = "none";
 
-        var debut=10;
+        var debut=5;
         var debutTimer= document.createElement("p");
         debutTimer.textContent = debut + " secondes";
         debutTimer.style.color = "#3358a3";
