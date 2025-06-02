@@ -1,0 +1,410 @@
+[
+    {
+    "id": 1,
+    "type": "radio",
+    "question": "Quel est le thème principal du site GameLoading ?",
+    "options": ["L'histoire du jeu vidéo", "La cuisine", "Le cinéma", "La musique"],
+    "correct": ["L'histoire du jeu vidéo"]
+  },
+  {
+    "id": 2,
+    "type": "radio",
+    "question": "Quel jeu est considéré comme le premier grand succès commercial du jeu vidéo ?",
+    "options": ["Pong", "Tetris", "Pac-Man", "Super Mario Bros."],
+    "correct": ["Pong"]
+  },
+  {
+    "id": 3,
+    "type": "checkbox",
+    "question": "Quels jeux ont marqué l'âge d'or de l'arcade ?",
+    "options": ["Pong", "Space Invaders", "Pac-Man", "Minecraft"],
+    "correct": ["Pong", "Space Invaders", "Pac-Man"]
+  },
+  {
+    "id": 4,
+    "type": "radio",
+    "question": "Quel jeu a popularisé le genre du puzzle game et a connu un immense succès sur Game Boy ?",
+    "options": ["Tetris", "Doom", "Pokémon Rouge/Bleu", "Street Fighter II"],
+    "correct": ["Tetris"]
+  },
+  {
+    "id": 5,
+    "type": "checkbox",
+    "question": "Quels mini-jeux sont disponibles sur GameLoading ?",
+    "options": ["Tetris", "Ice Race", "Quiz", "Snake"],
+    "correct": ["Tetris", "Ice Race", "Quiz"]
+  },
+  {
+    "id": 6,
+    "type": "radio",
+    "question": "Quel jeu a révolutionné le jeu de plateforme et sauvé l'industrie après le krach de 1983 ?",
+    "options": ["Super Mario Bros.", "The Legend of Zelda", "Doom", "Pac-Man"],
+    "correct": ["Super Mario Bros."]
+  },
+  {
+    "id": 7,
+    "type": "checkbox",
+    "question": "Quelles innovations sont associées à The Legend of Zelda (1986) ?",
+    "options": ["Monde ouvert", "Sauvegarde de la progression", "Jeu de combat en versus", "Exploration de donjons"],
+    "correct": ["Monde ouvert", "Sauvegarde de la progression", "Exploration de donjons"]
+  },
+  {
+    "id": 8,
+    "type": "radio",
+    "question": "Quel jeu a défini le genre du jeu de combat en versus et popularisé les tournois d'arcade ?",
+    "options": ["Street Fighter II", "Doom", "Pokémon Rouge/Bleu", "Tetris"],
+    "correct": ["Street Fighter II"]
+  },
+  {
+    "id": 9,
+    "type": "radio",
+    "question": "Quel jeu a révolutionné le FPS et introduit le multijoueur en réseau ?",
+    "options": ["Doom", "Minecraft", "Pac-Man", "Space Invaders"],
+    "correct": ["Doom"]
+  },
+  {
+    "id": 10,
+    "type": "checkbox",
+    "question": "Quels jeux sont emblématiques de l'ère du jeu en ligne et mobile ?",
+    "options": ["World of Warcraft", "Call of Duty", "Minecraft", "Angry Birds"],
+    "correct": ["World of Warcraft", "Call of Duty", "Minecraft", "Angry Birds"]
+  },
+  {
+    "id": 11,
+    "type": "radio",
+    "question": "Qui sont les créateurs du site GameLoading ?",
+    "options": ["Jules et Thomas", "Alice et Bob", "Mario et Luigi", "Sacha et Pikachu"],
+    "correct": ["Jules et Thomas"]
+  },
+  {
+    "id": 12,
+    "type": "text",
+    "question": "Cite une motivation principale des créateurs du site.",
+    "correct": ["Partager leur passion pour le jeu vidéo", "Apprendre le développement web", "Créer une plateforme pédagogique"]
+  },
+  {
+    "id": 13,
+    "type": "radio",
+    "question": "Quel lien externe est proposé dans le pied de page du site ?",
+    "options": ["Wikipédia - Histoire du jeu vidéo", "YouTube", "Steam", "Reddit"],
+    "correct": ["Wikipédia - Histoire du jeu vidéo"]
+  },
+  {
+    "id": 14,
+    "type": "text",
+    "question": "Combien y a-t-il de pièces différentes au Tetris de ce site?",
+    "correct": ["5"]
+  },
+  {
+    "id": 15,
+    "type": "radio",
+    "question": "Quel jeu est un bac à sable qui encourage la créativité et l'exploration ?",
+    "options": ["Minecraft", "Tetris", "Pac-Man", "Street Fighter II"],
+    "correct": ["Minecraft"]
+  },
+  {
+    "id": 16,
+    "type": "radio",
+    "question": "Quel jeu est célèbre pour ses fantômes et ses pac-gommes ?",
+    "options": ["Pac-Man", "Tetris", "Doom", "Pong"],
+    "correct": ["Pac-Man"]
+  },
+  {
+    "id": 17,
+    "type": "radio",
+    "question": "Quel jeu a lancé la franchise Pokémon ?",
+    "options": ["Pokémon Rouge/Bleu", "Pokémon Or/Argent", "Pokémon Go", "Pokémon Émeraude"],
+    "correct": ["Pokémon Rouge/Bleu"]
+  },
+  {
+    "id": 18,
+    "type": "checkbox",
+    "question": "Quels jeux sont sortis sur Game Boy ?",
+    "options": ["Tetris", "Pokémon Rouge/Bleu", "Minecraft", "Doom"],
+    "correct": ["Tetris", "Pokémon Rouge/Bleu"]
+  },
+  {
+    "id": 19,
+    "type": "radio",
+    "question": "Quel jeu est considéré comme le premier FPS moderne ?",
+    "options": ["Doom", "Tetris", "Pac-Man", "Street Fighter II"],
+    "correct": ["Doom"]
+  },
+  {
+    "id": 20,
+    "type": "checkbox",
+    "question": "Quels jeux ont été développés par Nintendo ?",
+    "options": ["Super Mario Bros.", "The Legend of Zelda", "Tetris", "Street Fighter II"],
+    "correct": ["Super Mario Bros.", "The Legend of Zelda"]
+  },
+  {
+    "id": 21,
+    "type": "radio",
+    "question": "Quel jeu a introduit le système de combos dans les jeux de combat ?",
+    "options": ["Street Fighter II", "Pac-Man", "Tetris", "Doom"],
+    "correct": ["Street Fighter II"]
+  },
+  {
+    "id": 22,
+    "type": "radio",
+    "question": "Quel jeu a été créé par Markus Persson ?",
+    "options": ["Minecraft", "Tetris", "Pac-Man", "Pong"],
+    "correct": ["Minecraft"]
+  },
+  {
+    "id": 23,
+    "type": "checkbox",
+    "question": "Quels jeux sont des jeux de réflexion ?",
+    "options": ["Tetris", "Minecraft", "Pac-Man", "Pong"],
+    "correct": ["Tetris", "Pong"]
+  },
+  {
+    "id": 24,
+    "type": "radio",
+    "question": "Quel jeu a popularisé le multijoueur en ligne sur PC ?",
+    "options": ["World of Warcraft", "Pac-Man", "Tetris", "Pokémon Rouge/Bleu"],
+    "correct": ["World of Warcraft"]
+  },
+  {
+    "id": 25,
+    "type": "checkbox",
+    "question": "Quels jeux sont emblématiques de l'ère 3D ?",
+    "options": ["Final Fantasy VII", "Ocarina of Time", "Pac-Man", "Pong"],
+    "correct": ["Final Fantasy VII", "Ocarina of Time"]
+  },
+  {
+    "id": 26,
+    "type": "radio",
+    "question": "Quel jeu a été un pionnier du monde ouvert ?",
+    "options": ["The Legend of Zelda", "Pac-Man", "Tetris", "Street Fighter II"],
+    "correct": ["The Legend of Zelda"]
+  },
+  {
+    "id": 27,
+    "type": "radio",
+    "question": "Quel jeu a été développé en URSS ?",
+    "options": ["Tetris", "Pac-Man", "Doom", "Pokémon Rouge/Bleu"],
+    "correct": ["Tetris"]
+  },
+  {
+    "id": 28,
+    "type": "checkbox",
+    "question": "Quels jeux ont marqué la renaissance du jeu vidéo après 1985 ?",
+    "options": ["Super Mario Bros.", "The Legend of Zelda", "Pong", "Pac-Man"],
+    "correct": ["Super Mario Bros.", "The Legend of Zelda"]
+  },
+  {
+    "id": 29,
+    "type": "radio",
+    "question": "Quel jeu a introduit la sauvegarde de la progression ?",
+    "options": ["The Legend of Zelda", "Pac-Man", "Tetris", "Doom"],
+    "correct": ["The Legend of Zelda"]
+  },
+  {
+    "id": 30,
+    "type": "radio",
+    "question": "Quel jeu est célèbre pour ses blocs à empiler ?",
+    "options": ["Tetris", "Pac-Man", "Doom", "Street Fighter II"],
+    "correct": ["Tetris"]
+  },
+  {
+    "id": 31,
+    "type": "checkbox",
+    "question": "Quels jeux sont des jeux de plateforme ?",
+    "options": ["Super Mario Bros.", "Ocarina of Time", "Pac-Man", "Tetris"],
+    "correct": ["Super Mario Bros.", "Pac-Man"]
+  },
+  {
+    "id": 32,
+    "type": "radio",
+    "question": "Quel jeu a été un phénomène mondial sur mobile ?",
+    "options": ["Angry Birds", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Angry Birds"]
+  },
+  {
+    "id": 33,
+    "type": "radio",
+    "question": "Quel jeu a inspiré la création de nombreux mods ?",
+    "options": ["Doom", "Pac-Man", "Tetris", "Pokémon Rouge/Bleu"],
+    "correct": ["Doom"]
+  },
+  {
+    "id": 34,
+    "type": "checkbox",
+    "question": "Quels jeux ont une bande-son mémorable ?",
+    "options": ["Super Mario Bros.", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Super Mario Bros.", "Tetris", "Pac-Man", "Doom"]
+  },
+  {
+    "id": 35,
+    "type": "radio",
+    "question": "Quel jeu a été un succès sur Game Boy et a favorisé l'aspect social ?",
+    "options": ["Pokémon Rouge/Bleu", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Pokémon Rouge/Bleu"]
+  },
+  {
+    "id": 36,
+    "type": "radio",
+    "question": "Quel jeu a été au cœur de polémiques sur la violence ?",
+    "options": ["Doom", "Pac-Man", "Tetris", "Pokémon Rouge/Bleu"],
+    "correct": ["Doom"]
+  },
+  {
+    "id": 37,
+    "type": "checkbox",
+    "question": "Quels jeux ont été adaptés en dessins animés ou films ?",
+    "options": ["Pokémon Rouge/Bleu", "Super Mario Bros.", "Pac-Man", "Doom"],
+    "correct": ["Pokémon Rouge/Bleu", "Super Mario Bros.", "Pac-Man"]
+  },
+  {
+    "id": 38,
+    "type": "radio",
+    "question": "Quel jeu a été un pionnier du multijoueur local ?",
+    "options": ["Pong", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Pong"]
+  },
+  {
+    "id": 39,
+    "type": "radio",
+    "question": "Quel jeu a été un succès sur PC et consoles grâce à sa créativité ?",
+    "options": ["Minecraft", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Minecraft"]
+  },
+  {
+    "id": 40,
+    "type": "checkbox",
+    "question": "Quels jeux ont marqué l'histoire par leur innovation ?",
+    "options": ["Pong", "Tetris", "The Legend of Zelda", "Minecraft"],
+    "correct": ["Pong", "Tetris", "The Legend of Zelda", "Minecraft"]
+  },
+  {
+    "id": 41,
+    "type": "radio",
+    "question": "Quel jeu a été créé par Alexey Pajitnov ?",
+    "options": ["Tetris", "Pac-Man", "Doom", "Pokémon Rouge/Bleu"],
+    "correct": ["Tetris"]
+  },
+  {
+    "id": 42,
+    "type": "radio",
+    "question": "Quel jeu a été un succès dans les salles d'arcade japonaises ?",
+    "options": ["Space Invaders", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Space Invaders"]
+  },
+  {
+    "id": 43,
+    "type": "checkbox",
+    "question": "Quels jeux ont été des phénomènes culturels ?",
+    "options": ["Pac-Man", "Pokémon Rouge/Bleu", "Minecraft", "Tetris"],
+    "correct": ["Pac-Man", "Pokémon Rouge/Bleu", "Minecraft", "Tetris"]
+  },
+  {
+    "id": 44,
+    "type": "radio",
+    "question": "Quel jeu a été le premier à proposer un mode histoire complexe ?",
+    "options": ["Final Fantasy VII", "Pac-Man", "Tetris", "Pong"],
+    "correct": ["Final Fantasy VII"]
+  },
+  {
+    "id": 45,
+    "type": "radio",
+    "question": "Quel jeu a été un succès grâce à la création de serveurs personnalisés ?",
+    "options": ["Minecraft", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Minecraft"]
+  },
+  {
+    "id": 46,
+    "type": "checkbox",
+    "question": "Quels jeux ont été joués sur bornes d'arcade ?",
+    "options": ["Pong", "Space Invaders", "Pac-Man", "Doom"],
+    "correct": ["Pong", "Space Invaders", "Pac-Man"]
+  },
+  {
+    "id": 47,
+    "type": "radio",
+    "question": "Quel jeu a été un succès sur consoles portables ?",
+    "options": ["Pokémon Rouge/Bleu", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Pokémon Rouge/Bleu"]
+  },
+  {
+    "id": 48,
+    "type": "radio",
+    "question": "Quel jeu a été un pionnier de la réalité virtuelle ?",
+    "options": ["Half-Life: Alyx", "Minecraft", "Pac-Man", "Tetris"],
+    "correct": ["Half-Life: Alyx"]
+  },
+  {
+    "id": 49,
+    "type": "checkbox",
+    "question": "Quels jeux ont été créés dans les années 1980 ?",
+    "options": ["Pac-Man", "Tetris", "Super Mario Bros.", "Doom"],
+    "correct": ["Pac-Man", "Tetris", "Super Mario Bros."]
+  },
+  {
+    "id": 50,
+    "type": "radio",
+    "question": "Quel jeu a été un succès grâce à la génération procédurale ?",
+    "options": ["Minecraft", "Tetris", "Pac-Man", "Doom"],
+    "correct": ["Minecraft"]
+  },
+  {
+    "id": 51,
+    "type": "text",
+    "question": "Cite un jeu emblématique de l'âge d'or de l'arcade.",
+    "correct": ["Pac-Man", "Space Invaders", "Pong"]
+  },
+  {
+    "id": 52,
+    "type": "text",
+    "question": "Quel est le nom du créateur de Tetris ?",
+    "correct": ["Alexey Pajitnov"]
+  },
+  {
+    "id": 53,
+    "type": "text",
+    "question": "Cite une console emblématique des années 1990.",
+    "correct": ["Super Nintendo", "Game Boy", "PlayStation"]
+  },
+  {
+    "id": 54,
+    "type": "text",
+    "question": "Quel est le nom du héros de The Legend of Zelda ?",
+    "correct": ["Link"]
+  },
+  {
+    "id": 55,
+    "type": "text",
+    "question": "Cite un mini-jeu disponible sur GameLoading.",
+    "correct": ["Tetris", "Ice Race", "Quiz"]
+  },
+  {
+    "id": 56,
+    "type": "text",
+    "question": "Quel est le nom du plombier le plus célèbre du jeu vidéo ?",
+    "correct": ["Mario"]
+  },
+  {
+    "id": 57,
+    "type": "text",
+    "question": "Cite un jeu qui a marqué l'ère du jeu en ligne.",
+    "correct": ["World of Warcraft", "Call of Duty"]
+  },
+  {
+    "id": 58,
+    "type": "text",
+    "question": "Quel est le nom du site web proposé dans le pied de page pour en savoir plus ?",
+    "correct": ["Wikipédia", "Wikipédia - Histoire du jeu vidéo"]
+  },
+  {
+    "id": 59,
+    "type": "text",
+    "question": "Cite un personnage emblématique de Street Fighter II.",
+    "correct": ["Ryu", "Chun-Li", "Guile"]
+  },
+  {
+    "id": 60,
+    "type": "text",
+    "question": "Quel est le nom du site sur lequel tu passes ce quiz ?",
+    "correct": ["GameLoading"]
+  }
+]
