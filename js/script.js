@@ -56,6 +56,7 @@ function startOursAnimation() {
         currentFrame = (currentFrame + 1) % oursFrames.length;
         perso.style.backgroundImage = `url('${oursImages[currentFrame].src}')`;
     }, 100); 
+}
 
 function stopOursAnimation() {
     if (oursInterval) clearInterval(oursInterval);
@@ -111,37 +112,37 @@ function sauter(){
     }
     setTimeout(function(){
         perso.classList.remove('animation');
-    }, 500), verification()
+    }, 500);
 }
 
 function verification(){
     var verification = setInterval(function(){
+        if (!jeuEnCours) {
+            clearInterval(verification);
+            return;
+        }
+        
         var persoTop = parseInt(window.getComputedStyle(perso).getPropertyValue("top"));
         var obstaclesLeft = parseInt(window.getComputedStyle(obstacles).getPropertyValue("left"));
         var obstaclesLeft2 = parseInt(window.getComputedStyle(obstacles2).getPropertyValue("left"));
         
-        if(obstaclesLeft < 100 && obstaclesLeft > 0 && persoTop >= 60 ){
+        if((obstaclesLeft < 100 && obstaclesLeft > 0 && persoTop >= 60) || 
+           (obstaclesLeft2 < 100 && obstaclesLeft2 > 0 && persoTop >= 60)){
             jeuEnCours = false;
             updateRecord();
             stopOursAnimation();
             perso.style.top = "133px";
-            setTimeout('', 500);
             obstacles.style.animation = "none";
             obstacles2.style.animation = "none";
             jeu.classList.remove("bg-anim");
             clearInterval(verification);
         }
         
-        compteur = ++compteur;
-        if(obstaclesLeft <= 0){
-            if(compteur >= 1000){
-                compteur = compteur + 3;
-                document.getElementById("p").innerHTML = ("Score : " + compteur);
-            } else {
-                compteur = compteur;
-                document.getElementById("p").innerHTML = ("Score : " + compteur);
-            }
+        if(!jeuEnCours) return;
+        
+        compteur++;
+        if(obstaclesLeft <= 0 || obstaclesLeft2 <= 0){
+            document.getElementById("p").innerHTML = ("Score : " + compteur);
         }
-    }, 0);
-}
+    }, 16);
 }
