@@ -1,5 +1,5 @@
 let boutonBurger = null;
-const nav = document.querySelector('.headerNav');  // Utilise la classe spécifique de ta nav
+const nav = document.querySelector('.headerNav'); 
 const navLinks = document.querySelector('.nav-links');
 
 function ResizeScreen(){
@@ -26,7 +26,6 @@ function createBouttonBurger(){
     boutonBurger.addEventListener('click', () => {
         navLinks.classList.toggle("open");
         boutonBurger.classList.toggle("open");
-        console.log("Menu toggle clicked"); // Pour le débogage
     });
     
     nav.appendChild(boutonBurger);
@@ -43,10 +42,9 @@ function removeBouttonBurger(){
 window.addEventListener('resize', ResizeScreen);
 ResizeScreen();
 
-// Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
     let boutonBurger = null;
-    const nav = document.querySelector('.headerNav');  // Utilise la classe spécifique de ta nav
+    const nav = document.querySelector('.headerNav'); 
     const navLinks = document.querySelector('.nav-links');
     
     function ResizeScreen(){
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         boutonBurger = document.createElement('button');
         boutonBurger.classList.add('menu-burger');
         
-        // Créer les 3 barres du menu burger
         for (let i = 0; i < 3; i++) {
             const bar = document.createElement('span');
             bar.classList.add('burger-bar');
@@ -73,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         boutonBurger.addEventListener('click', () => {
             navLinks.classList.toggle("open");
             boutonBurger.classList.toggle("open");
-            console.log("Menu toggle clicked"); // Pour le débogage
         });
         
         nav.appendChild(boutonBurger);

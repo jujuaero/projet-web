@@ -1,12 +1,11 @@
 let questions = [];
 let tempsInterval;
-let tempsQuiz = 300; // 5 minutes en secondes
+let tempsQuiz = 300; 
 let pseudo = "";
 
 async function loadQuestions() {
   const response = await fetch("../json/question.json");
   const questions = await response.json();
-  // trie les question dans un odre puis prends les 20 premières
   return questions.sort(() => 0.5 - Math.random()).slice(0, 20);
 }
 
@@ -15,11 +14,9 @@ function apparitionQuestion(q){
     quizContainer.innerHTML = ""; 
     
     q.forEach((question, index) => {
-        // Créer un div avec la classe quiz-question
         const questionDiv = document.createElement("div");
         questionDiv.className = "quiz-question";
         
-        // Créer le fieldset à l'intérieur du div
         const filset = document.createElement("fieldset");
         const legend = document.createElement("legend");
         legend.textContent = `Question ${index + 1} : ${question.question}`;
@@ -33,7 +30,6 @@ function apparitionQuestion(q){
                 input.name = `q${question.id}`;
                 input.value = option;
                 
-                // Ajouter l'input au label sans BR
                 label.appendChild(input);
                 label.appendChild(document.createTextNode(option));
                 filset.appendChild(label);
@@ -45,10 +41,8 @@ function apparitionQuestion(q){
             filset.appendChild(input);
         }
         
-        // Ajouter le fieldset au div quiz-question
         questionDiv.appendChild(filset);
         
-        // Ajouter le div au conteneur
         quizContainer.appendChild(questionDiv);
     });
 }

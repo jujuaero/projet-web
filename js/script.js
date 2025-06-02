@@ -54,10 +54,8 @@ function startOursAnimation() {
     oursInterval = setInterval(function() {
         if (!jeuEnCours) return;
         currentFrame = (currentFrame + 1) % oursFrames.length;
-        // Utiliser les images préchargées
         perso.style.backgroundImage = `url('${oursImages[currentFrame].src}')`;
-    }, 100); // Réduire légèrement l'intervalle pour plus de fluidité
-}
+    }, 100); 
 
 function stopOursAnimation() {
     if (oursInterval) clearInterval(oursInterval);
@@ -146,5 +144,4 @@ function verification(){
         }
     }, 0);
 }
-
-
+}

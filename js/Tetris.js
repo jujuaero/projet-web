@@ -123,7 +123,6 @@ function resetGame() {
   timerId = setInterval(moveDown, 600);
 }
 
-// Correction collision: freeze si la prochaine descente touche une case prise ou le bas
 function moveDown() {
   if (isPaused || isGameOver) return;
   undraw();
@@ -222,10 +221,8 @@ function clearFullLines() {
       rowCells.forEach(cell => {
         cell.classList.remove('taken', 'block');
       });
-      // Retirer les divs du tableau et les replacer en haut
       const removed = cells.splice(start, width);
       cells.unshift(...removed);
-      // Réafficher la grille
       cells.forEach(cell => grid.appendChild(cell));
       score += 100;
       if (document.getElementById("score"))

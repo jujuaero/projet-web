@@ -123,7 +123,6 @@ button:active {
 p{font-size: 18px;color:black;text-align : center;}
 #space{font-size: 14px;color: white;}
 
-/* Ajoute cette règle à ton fichier style.css */
 .logo-top-left {
     position: fixed;
     top: 10px;

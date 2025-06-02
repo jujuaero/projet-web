@@ -131,33 +131,33 @@ body{
         padding: 0 4px;
     }
     .nav-links {
-        margin-top: 0; /* Supprimer le margin-top de 235px */
+        margin-top: 0; 
         display: none;
     }
     .nav-links.open {
         display: flex !important;
         flex-direction: column;
         position: absolute;
-        top: 56px; /* Hauteur exacte du headerNav en version mobile */
-        right: 0; /* Aligner à droite au lieu de left: 0 */
-        width: 200px; /* Largeur plus appropriée pour un menu burger */
-        background: #3358a3; /* Même couleur que le header */
+        top: 56px; 
+        right: 0; 
+        width: 200px;
+        background: #3358a3; 
         z-index: 999;
-        box-shadow: -2px 2px 10px rgba(0,0,0,0.2); /* Ajoute une ombre */
-        border-radius: 0 0 0 8px; /* Arrondi le coin inférieur gauche */
-        align-items: center; /* Ajouter pour centrer verticalement */
+        box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+        border-radius: 0 0 0 8px; 
+        align-items: center; 
     }
     .nav-links li {
         margin: 0;
         width: 100%;
-        text-align: center; /* Changer left en center */
+        text-align: center; 
     }
     
     .nav-links li a {
         padding: 12px 20px;
-        text-align: center; /* Changer left en center */
-        display: block; /* Ajouter display block pour que le padding s'applique correctement */
-        width: auto; /* Permet au texte de rester centré */
+        text-align: center; 
+        display: block; 
+        width: auto; 
     }
 
     .nav-links li a:hover {
