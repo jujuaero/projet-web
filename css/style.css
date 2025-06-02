@@ -137,11 +137,6 @@ p{font-size: 18px;color:black;text-align : center;}
     z-index: 1000;
 }
 
-.perso, .obstacles, .obstacles2 {
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
+
 
 
