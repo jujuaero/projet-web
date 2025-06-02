@@ -6,18 +6,26 @@ var compteur = 0;
 var jeuEnCours = false;
 var record = parseInt(localStorage.getItem('iceRaceRecord')) || 0;
 
-var oursFrames = [
+// Précharger les images
+const oursImages = [];
+const oursFrames = [
     "../images/ours1.png",
     "../images/ours2.png",
     "../images/ours3.png",
     "../images/ours4.png"
 ];
-var oursInterval = null;
-var currentFrame = 0;
 
+// Préchargement des images au démarrage
 window.addEventListener('load', function() {
+    oursFrames.forEach((src, index) => {
+        oursImages[index] = new Image();
+        oursImages[index].src = src;
+    });
     document.getElementById("record").innerHTML = ("Record : " + record);
 });
+
+var oursInterval = null;
+var currentFrame = 0;
 
 document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
@@ -44,9 +52,11 @@ function startOursAnimation() {
     if (oursInterval) clearInterval(oursInterval);
     currentFrame = 0;
     oursInterval = setInterval(function() {
+        if (!jeuEnCours) return;
         currentFrame = (currentFrame + 1) % oursFrames.length;
-        perso.style.backgroundImage = "url('" + oursFrames[currentFrame] + "')";
-    }, 120);
+        // Utiliser les images préchargées
+        perso.style.backgroundImage = `url('${oursImages[currentFrame].src}')`;
+    }, 100); // Réduire légèrement l'intervalle pour plus de fluidité
 }
 
 function stopOursAnimation() {
