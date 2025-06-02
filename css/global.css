@@ -145,16 +145,21 @@ body{
         z-index: 999;
         box-shadow: -2px 2px 10px rgba(0,0,0,0.2); /* Ajoute une ombre */
         border-radius: 0 0 0 8px; /* Arrondi le coin inférieur gauche */
+        align-items: center; /* Ajouter pour centrer verticalement */
     }
     .nav-links li {
         margin: 0;
         width: 100%;
-        text-align: left; /* Aligner le texte à gauche */
+        text-align: center; /* Changer left en center */
     }
+    
     .nav-links li a {
-        padding: 12px 20px; /* Plus de padding à gauche */
-        text-align: left;
+        padding: 12px 20px;
+        text-align: center; /* Changer left en center */
+        display: block; /* Ajouter display block pour que le padding s'applique correctement */
+        width: auto; /* Permet au texte de rester centré */
     }
+
     .nav-links li a:hover {
         background: rgba(255,255,255,0.18);
         color: #ffe082;
