@@ -13,7 +13,13 @@ async function loadQuestions() {
 function apparitionQuestion(q){
     const quizContainer = document.getElementById("question-quiz");
     quizContainer.innerHTML = ""; 
-    q.forEach((question, index) =>{
+    
+    q.forEach((question, index) => {
+        // Créer un div avec la classe quiz-question
+        const questionDiv = document.createElement("div");
+        questionDiv.className = "quiz-question";
+        
+        // Créer le fieldset à l'intérieur du div
         const filset = document.createElement("fieldset");
         const legend = document.createElement("legend");
         legend.textContent = `Question ${index + 1} : ${question.question}`;
@@ -26,19 +32,24 @@ function apparitionQuestion(q){
                 input.type = question.type;
                 input.name = `q${question.id}`;
                 input.value = option;
+                
+                // Ajouter l'input au label sans BR
                 label.appendChild(input);
-                label.append(`${option}`);
+                label.appendChild(document.createTextNode(option));
                 filset.appendChild(label);
-                filset.appendChild(document.createElement("br"));
             });
-        }else if(question.type === "text") {
+        } else if(question.type === "text") {
             const input = document.createElement("textarea");
             input.name = `q${question.id}`;
             input.rows = 4;
-            input.cols = 50;
             filset.appendChild(input);
         }
-        quizContainer.appendChild(filset);
+        
+        // Ajouter le fieldset au div quiz-question
+        questionDiv.appendChild(filset);
+        
+        // Ajouter le div au conteneur
+        quizContainer.appendChild(questionDiv);
     });
 }
 

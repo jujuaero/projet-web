@@ -69,60 +69,155 @@ h2,legend {
 .quiz-question {
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
-  padding: 32px 36px 24px 36px;
-  margin: 32px auto 24px auto;
-  max-width: 420px;
+  padding: 28px 32px 24px;
+  margin: 30px auto;
+  max-width: 520px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  transition: box-shadow 0.3s, transform 0.3s;
+  gap: 12px;
+  
+  /* Effet de flottement */
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.12);
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  
+  /* Animation d'entrée */
+  animation: floatingIn 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
 }
+
+.quiz-question:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(44, 62, 80, 0.15);
+}
+
+/* Animation d'entrée progressive */
+@keyframes floatingIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Délai d'animation pour chaque question */
+.quiz-question:nth-child(1) { animation-delay: 0.1s; }
+.quiz-question:nth-child(2) { animation-delay: 0.2s; }
+.quiz-question:nth-child(3) { animation-delay: 0.3s; }
+.quiz-question:nth-child(4) { animation-delay: 0.4s; }
+.quiz-question:nth-child(5) { animation-delay: 0.5s; }
+.quiz-question:nth-child(6) { animation-delay: 0.6s; }
+
 .quiz-question legend {
-  font-size: 1.1em;
-  color: #3358a3;
-  font-weight: 600;
-  margin-bottom: 10px;
-  letter-spacing: 0.2px;
+  font-size: 1.15rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+  padding: 0 10px;
+  position: relative;
 }
+
+.quiz-question legend::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f8cff, #1abc9c);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
 .quiz-question label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1em;
-  color: #2c3e50;
-  margin: 4px 0;
+  margin: 10px 0;
+  padding: 12px 18px;
+  background-color: #f8fbff;
+  border-radius: 10px;
+  transition: all 0.25s ease;
   cursor: pointer;
-  transition: color 0.2s;
+  border: 1px solid transparent;
 }
+
+.quiz-question label:hover {
+  background-color: #edf5ff;
+  border-color: #d0e3ff;
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
 .quiz-question input[type="radio"],
 .quiz-question input[type="checkbox"] {
-  accent-color: #4f8cff;
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3358a3;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+  transition: all 0.3s;
+  background-color: white;
 }
+
+.quiz-question input[type="checkbox"] {
+  border-radius: 6px;
+}
+
+.quiz-question input[type="radio"]:checked,
+.quiz-question input[type="checkbox"]:checked {
+  background-color: #3358a3;
+  border-color: #3358a3;
+  box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.2);
+}
+
+.quiz-question input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quiz-question input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .quiz-question textarea {
   width: 100%;
-  min-height: 60px;
-  border-radius: 7px;
-  border: 1.5px solid #b3c6e0;
+  min-height: 80px;
+  border-radius: 10px;
+  border: 2px solid #d0e3ff;
   font-size: 1.05em;
-  padding: 8px 12px;
+  padding: 12px 15px;
   background: #fafdff;
-  margin-top: 8px;
-  transition: border 0.2s;
+  margin-top: 10px;
+  transition: all 0.3s;
   resize: vertical;
 }
+
 .quiz-question textarea:focus {
-  border: 1.5px solid #4f8cff;
+  border-color: #4f8cff;
   outline: none;
-}
-.quiz-question:hover {
-  box-shadow: 0 8px 36px rgba(44,62,80,0.16);
-  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.2);
 }
 
 #quiz-button, #quiz-result{

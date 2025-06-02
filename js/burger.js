@@ -1,35 +1,92 @@
-let boutonBurger=null;
-const nav=document.querySelector('nav');
-const navLinks=document.querySelector('.nav-links');
+let boutonBurger = null;
+const nav = document.querySelector('.headerNav');  // Utilise la classe spécifique de ta nav
+const navLinks = document.querySelector('.nav-links');
 
 function ResizeScreen(){
-    if(window.innerWidth<=800){
+    if(window.innerWidth <= 800){
         if(!boutonBurger){
             createBouttonBurger();
         }
-    }else{
+    } else {
         removeBouttonBurger();
     }
 }
 
 function createBouttonBurger(){
-    boutonBurger=document.createElement('button');
+    boutonBurger = document.createElement('button');
     boutonBurger.classList.add('menu-burger');
-    boutonBurger.innerHTML='menu';
+    
+    // Créer les 3 barres du menu burger
+    for (let i = 0; i < 3; i++) {
+        const bar = document.createElement('span');
+        bar.classList.add('burger-bar');
+        boutonBurger.appendChild(bar);
+    }
 
-    boutonBurger.addEventListener('click',() =>{
+    boutonBurger.addEventListener('click', () => {
         navLinks.classList.toggle("open");
-    })
+        boutonBurger.classList.toggle("open");
+        console.log("Menu toggle clicked"); // Pour le débogage
+    });
+    
     nav.appendChild(boutonBurger);
 }
 
 function removeBouttonBurger(){
     if(boutonBurger){
         boutonBurger.remove();
-        boutonBurger=null;
+        boutonBurger = null;
         navLinks.classList.remove("open");
     }
 }
 
-window.addEventListener('resize',ResizeScreen);
+window.addEventListener('resize', ResizeScreen);
 ResizeScreen();
+
+// Attendre que le DOM soit complètement chargé
+document.addEventListener('DOMContentLoaded', function() {
+    let boutonBurger = null;
+    const nav = document.querySelector('.headerNav');  // Utilise la classe spécifique de ta nav
+    const navLinks = document.querySelector('.nav-links');
+    
+    function ResizeScreen(){
+        if(window.innerWidth <= 800){
+            if(!boutonBurger){
+                createBouttonBurger();
+            }
+        } else {
+            removeBouttonBurger();
+        }
+    }
+    
+    function createBouttonBurger(){
+        boutonBurger = document.createElement('button');
+        boutonBurger.classList.add('menu-burger');
+        
+        // Créer les 3 barres du menu burger
+        for (let i = 0; i < 3; i++) {
+            const bar = document.createElement('span');
+            bar.classList.add('burger-bar');
+            boutonBurger.appendChild(bar);
+        }
+    
+        boutonBurger.addEventListener('click', () => {
+            navLinks.classList.toggle("open");
+            boutonBurger.classList.toggle("open");
+            console.log("Menu toggle clicked"); // Pour le débogage
+        });
+        
+        nav.appendChild(boutonBurger);
+    }
+    
+    function removeBouttonBurger(){
+        if(boutonBurger){
+            boutonBurger.remove();
+            boutonBurger = null;
+            navLinks.classList.remove("open");
+        }
+    }
+    
+    window.addEventListener('resize', ResizeScreen);
+    ResizeScreen();
+});
