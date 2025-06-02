@@ -25,18 +25,20 @@
     </header>
     <section id="information-section">
         <h1>Quiz : Testez vos connaissances sur le site !</h1>
-        <form id="start-form">
-            <legend>Vos informations</legend>
-            <label>Pseudo : </label>
-            <input type="text" id="pseudo" placeholder="Ex: Patate40"/>
+        <form >
+            <fieldset id="start-form">
+                 <legend>Vos informations</legend>
+                <label>Pseudo : </label>
+                <input type="text" id="pseudo" placeholder="Ex: Patate40">
 
-            <label>Date de naissance : </label>
-            <input type="date" value="" />
+                <label>Date de naissance : </label>
+                <input type="date" value="" >
 
-            <label>Adresse mail : </label>
-            <input type="email" placeholder="Ex: jaime.patate@super.com"/>
+                <label>Adresse mail : </label>
+                <input type="email" placeholder="Ex: jaime.patate@super.com">
 
-            <button type="button" id="start-button" onclick="verificationInfo()">Commencer le quiz</button>
+                <button type="button" id="start-button" onclick="verificationInfo()">Commencer le quiz</button>
+            </fieldset>
         </form>
     </section>
     <section id="quiz-section">
